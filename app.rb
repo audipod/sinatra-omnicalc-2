@@ -43,5 +43,8 @@ get("/divide") do
 end
 
 get("/wizard_divide") do
+  @first_num = params.fetch("first_num").to_f
+  @second_num = params.fetch("second_num").to_f
+  @result = params.fetch("first_num").to_f / params.fetch("second_num").to_f
   erb(:div_result)
 end
